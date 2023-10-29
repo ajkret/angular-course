@@ -13,6 +13,7 @@ export class ServersComponent {
   serverCreationStatus = 'offline'
   serverName = 'TestServer';
   serverCreated = false;
+  servers = [ 'Testserver', 'Testserver2'];
 
   constructor() {
     setTimeout(() => {
@@ -23,6 +24,7 @@ export class ServersComponent {
   onCreateServer() {
     this.serverCreationStatus = `online`;
     this.serverCreated = true;
+    this.servers.push(this.serverName);
   }
 
   onUpdateServerName(event: Event) {
